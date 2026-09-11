@@ -9,15 +9,15 @@ public class GamePiece
     
     public GamePiece()
     {
-        row = 0;
-        col = 0;
+        this.direction = 1;
+        this(0,0,null);
     }
   
-    public GamePiece(int r, int c, String n)
+    public GamePiece(int row, int col, String name)
     {
-        row = r;
-        col = c;
-        name = n;
+        this.row = row;
+        this.col = col;
+        this.name = name;
 
     }
 
@@ -34,10 +34,10 @@ public class GamePiece
     }
     
 
-    public void moveTo(int r, int c)
+    public void moveTo(int row, int col)
     {
-        row = r;
-        col = c;
+        this.row = row;
+        this.col = col;
     }
     
     public void moveLeft() {
